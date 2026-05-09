@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Erinna Portfolio</title>
+
+<style>
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* BODY */
+body{
+    font-family:'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #58f4ff, #ffffff);
+    color:#000;
+    text-align:center;
+}
+
+/* SECTION */
+section{
+    padding:60px 20px;
+    min-height:100vh;
+}
+
+/* TITLES */
+h1{
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+h2{
+    font-size:28px;
+    margin-top:15px;
+    margin-bottom:10px;
+}
+
+h3{
+    margin-bottom:10px;
+    margin-top:20px;
+}
+
+/* PARAGRAPH */
+p{
+    max-width:700px;
+    margin:15px auto;
+    line-height:1.7;
+}
+
+/* NAV BUTTONS */
+nav button{
+    margin:10px;
+    padding:12px 25px;
+    border:none;
+    border-radius:8px;
+    background:#38bdf8;
+    color:#0f172a;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+nav button:hover{
+    background:#0ea5e9;
+    transform:scale(1.05);
+}
+
+/* BACK BUTTON */
+.back-btn{
+    margin-bottom:20px;
+    padding:10px 20px;
+    border-radius:6px;
+    border:none;
+    background:#f87171;
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.back-btn:hover{
+    background:#ef4444;
+}
+
+/* IMAGE */
+img{
+    width:120px;
+    margin-top:20px;
+    border-radius:50%;
+    border:3px solid #000;
+    object-fit:cover;
+}
+
+/* CARD */
+.card{
+    background:#47797f;
+    color:white;
+    margin:20px auto;
+    padding:25px;
+    width:80%;
+    max-width:600px;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.3);
+    transition:0.3s;
+    text-align:left;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+/* LIST */
+ul{
+    padding-left:20px;
+    margin-top:10px;
+}
+
+li{
+    margin-bottom:8px;
+}
+
+/* LINK */
+a{
+    color:#38eff8;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HOME -->
+<section id="home">
+    
+    <h1>MY PORTFOLIO</h1>
+
+    <nav>
+        <button onclick="showPage('github')">GITHUB</button>
+        <button onclick="showPage('linkedin')">LINKEDIN</button>
+    </nav>
+
+    <img src="https://i.pinimg.com/736x/2e/90/89/2e90891ec5711d61787200bf5d6b1d1f.jpg" alt="Profile">
+
+    <h2>Nur Erinna Binti Abdullah</h2>
+
+    <p>
+        Hi! I'm a Computer Science student at Universiti Sultan Azlan Shah (USAS) 
+        with a passion for technology, programming, and software development. 
+        I enjoy learning new skills, solving problems, and creating digital solutions.
+    </p>
+
+</section>
+
+<!-- GITHUB -->
+<section id="github" style="display:none;">
+
+    <button class="back-btn" onclick="showPage('home')">BACK</button>
+
+    <h1>GITHUB</h1>
+
+    <img src="https://www.pngmart.com/files/22/GitHub-Download-PNG-Image.png" alt="GitHub Logo">
+
+    <div class="card">
+        <h3>Repositories</h3>
+
+        <ul>
+            <li>Internship Project</li>
+            <li>Student Management System</li>
+            <li>Beginner Web Development</li>
+        </ul>
+    </div>
+
+</section>
+
+<!-- LINKEDIN -->
+<section id="linkedin" style="display:none;">
+
+    <button class="back-btn" onclick="showPage('home')">BACK</button>
+
+    <h1>LINKEDIN</h1>
+
+    <img src="https://s.yimg.com/fz/api/res/1.2/xYP.091d23zOVvOPEv7KUw--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD00MTI7cHhvZmY9NTA7cHlvZmY9MTAwO3E9ODA7c3M9MTt3PTM4OA--/https://i.pinimg.com/736x/92/d1/db/92d1db1521d374335498624cc95e9554.jpg" alt="LinkedIn Logo">
+
+    <div class="card">
+
+        <h3>Experience</h3>
+        <ul>
+            <li>Academic Projects</li>
+            <li>Team Collaboration</li>
+            <li>Web Development Practice</li>
+        </ul>
+
+        <h3>Education</h3>
+        <ul>
+            <li>Bachelor’s Degree in Computer Science – USAS</li>
+            <li>Diploma in Information Technology (DIT)</li>
+        </ul>
+
+        <h3>Licenses & Certifications</h3>
+        <ul>
+            <li>USAS Academic Certifications</li>
+        </ul>
+
+        <h3>Skills</h3>
+        <ul>
+            <li>HTML & CSS</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>Java</li>
+            <li>MySQL</li>
+        </ul>
+
+    </div>
+
+</section>
+
+<script>
+
+function showPage(pageId){
+
+    // Hide all sections
+    document.getElementById('home').style.display = 'none';
+    document.getElementById('github').style.display = 'none';
+    document.getElementById('linkedin').style.display = 'none';
+
+    // Show selected section
+    document.getElementById(pageId).style.display = 'block';
+}
+
+</script>
+
+</body>
+</html>
